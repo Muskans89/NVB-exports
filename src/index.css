@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); /* Import Poppins from Google Fonts */
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'The Seasons';
+    src: url('./Fonts/Fontspring-DEMO-theseasons-reg.otf') format('opentype'); /* Regular */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'The Seasons';
+    src: url('./Fonts/Fontspring-DEMO-theseasons-bd.otf') format('opentype'); /* Bold */
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'The Seasons';
+    src: url('./Fonts/Fontspring-DEMO-theseasons-it.otf') format('opentype'); /* Italic */
+    font-weight: normal;
+    font-style: italic;
+}
