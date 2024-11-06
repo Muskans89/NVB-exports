@@ -6,6 +6,7 @@ import Footer from '../components/Footer'; // Import the Footer
 import WelcomeSection from '../components/welcome';
 import MissionVisionSection from '../components/Mission_vission';
 import MeetTheTeam from '../components/team';
+import HoliCursorEffect from '../components/holicoloreffect';
 
 const AboutBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -74,7 +75,7 @@ const AboutBanner = () => {
       <WelcomeSection />
       <MissionVisionSection />
       <MeetTheTeam />
-
+<HoliCursorEffect/>
       {/* Footer Component */}
       <Footer />
     </div>
