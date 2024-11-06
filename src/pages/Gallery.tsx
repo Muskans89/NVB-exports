@@ -16,6 +16,7 @@ import image9 from '../assets/bg2.jpg';
 import image10 from '../assets/bg10.jpg';
 import image11 from '../assets/bg1.jpg';
 import image12 from '../assets/bg3.jpg';
+import HoliCursorEffect from '../components/holicoloreffect';
 
 const images = [
   image1, image2, image3, image4, image5, image6,
@@ -53,7 +54,7 @@ const Gallery = () => {
           ))}
         </div>
       </section>
-
+<HoliCursorEffect/>
       {/* Footer Component */}
       <Footer />
     </div>

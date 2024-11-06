@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import bannerImage from '../assets/bg1.jpg'; // Import the banner image
 import contactImage from '../assets/bg5.jpg'; // Import the contact image
 import { motion } from 'framer-motion'; // Import motion from framer-motion
+import HoliCursorEffect from '../components/holicoloreffect';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -172,7 +173,7 @@ const ContactPage = () => {
           ></iframe>
         </div>
       </motion.section>
-
+<HoliCursorEffect/>
       {/* Footer Component */}
       <Footer />
     </div>

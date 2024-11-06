@@ -5,6 +5,7 @@ import FeaturedProducts from '../components/FeaturedProducts';
 import ColorShades from '../components/colorshade';
 import CustomizationSection from '../components/CustomizationSection';
 import HoliEventsSection from '../components/Holi_Event';
+import HoliCursorEffect from '../components/holicoloreffect';
 
 
 const ProductPage = () => {
@@ -16,6 +17,7 @@ const ProductPage = () => {
       <ColorShades/>
       <CustomizationSection/>
       <HoliEventsSection/>
+      <HoliCursorEffect/>
 
     <Footer/>
     </div>

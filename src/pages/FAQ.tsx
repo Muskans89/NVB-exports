@@ -3,6 +3,7 @@ import Header from '../components/Header'; // Import the Header
 import Footer from '../components/Footer'; // Import the Footer
 import bgImage from '../assets/bg5.jpg'; // Import the FAQ background image
 import { motion } from 'framer-motion'; // Import motion from framer-motion
+import HoliCursorEffect from '../components/holicoloreffect';
 
 
 const faqs = [
@@ -115,6 +116,7 @@ const FAQSection = () => {
 
       {/* Footer Component */}
       <Footer />
+      <HoliCursorEffect/>
     </div>
   );
 };
