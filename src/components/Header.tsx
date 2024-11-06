@@ -18,8 +18,8 @@ const HeaderWithOfferAndLogo = () => {
     <div className="font-nunito">
       {/* Fixed Container for Offer Banner and Navbar */}
       <div className="fixed top-0 left-0 right-0 z-50 w-full">
-        {/* Gradient Offer Banner */}
-        <header className="bg-red-500 text-white py-1 flex justify-center" style={{ fontFamily: 'The Seasons' }}>
+        {/* Gradient Offer Banner with padding on mobile */}
+        <header className="bg-red-500 text-white py-1 px-4 md:px-0 flex justify-center" style={{ fontFamily: 'The Seasons' }}>
           <div className="text-center">
             <p className="text-sm md:text-base">Bringing vibrant colours to celebrations worldwide with trusted safety and joy</p>
           </div>
