@@ -1,11 +1,9 @@
-
 import React, { useEffect, useRef } from 'react';
 
 const HoliCursorEffect: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const particlesRef = useRef<Particle[]>([]);
 
-    // Define the properties for each particle
     interface Particle {
         x: number;
         y: number;
@@ -16,38 +14,31 @@ const HoliCursorEffect: React.FC = () => {
         alpha: number;
     }
 
-    // Array of colors to use for the particles
-    const colors = ["#FF4500", "#FF6347", "#FFD700", "#32CD32", "#1E90FF", "#9400D3"];
+    const colors = ["#FF6347", "#FFD700", "#32CD32"]; // Fewer colors for a minimal look
 
-    // Function to create a new particle at the cursor's position
     const createParticle = (x: number, y: number): Particle => {
-        const angle = Math.random() * 2 * Math.PI; // Random direction for each particle
-        const speed = Math.random() * 0.5 + 0.1;   // Slow speed for trailing effect
+        const angle = Math.random() * 2 * Math.PI;
+        const speed = Math.random() * 0.3 + 0.1;  // Slower speed
 
         return {
             x,
             y,
-            size: Math.random() * 3 + 1,           // Random size for particles
-            color: colors[Math.floor(Math.random() * colors.length)], // Random color
-            speedX: Math.cos(angle) * speed,       // Horizontal speed component
-            speedY: Math.sin(angle) * speed,       // Vertical speed component
-            alpha: 1,                              // Initial opacity
+            size: Math.random() * 2 + 0.5,         // Smaller particles
+            color: colors[Math.floor(Math.random() * colors.length)],
+            speedX: Math.cos(angle) * speed,
+            speedY: Math.sin(angle) * speed,
+            alpha: 0.8,                            // Slightly lower initial opacity
         };
     };
 
-    // Animation loop to update and draw particles
     const animateParticles = (ctx: CanvasRenderingContext2D) => {
-        // Clear the canvas
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-
-        // Remove particles that are no longer visible
         particlesRef.current = particlesRef.current.filter(particle => particle.alpha > 0);
 
-        // Update and draw each particle
         particlesRef.current.forEach(particle => {
             particle.x += particle.speedX;
             particle.y += particle.speedY;
-            particle.alpha -= 0.005;    // Very slow fade out for longer trails
+            particle.alpha -= 0.01;    // Faster fade-out for a minimal effect
 
             ctx.globalAlpha = particle.alpha;
             ctx.fillStyle = particle.color;
@@ -60,17 +51,13 @@ const HoliCursorEffect: React.FC = () => {
         requestAnimationFrame(() => animateParticles(ctx));
     };
 
-    // Function to handle mouse movement and create particles at cursor position
     const handleMouseMove = (e: MouseEvent) => {
         const canvas = canvasRef.current;
         if (canvas) {
-            for (let i = 0; i < 5; i++) { // Fewer particles for a subtle trailing effect
-                particlesRef.current.push(createParticle(e.clientX, e.clientY));
-            }
+            particlesRef.current.push(createParticle(e.clientX, e.clientY)); // Only 1 particle per movement
         }
     };
 
-    // Effect to initialize the canvas and event listeners
     useEffect(() => {
         const canvas = canvasRef.current;
         if (canvas) {
@@ -82,7 +69,6 @@ const HoliCursorEffect: React.FC = () => {
                 window.addEventListener("mousemove", handleMouseMove);
                 animateParticles(ctx);
 
-                // Cleanup function
                 return () => {
                     window.removeEventListener("mousemove", handleMouseMove);
                 };
