@@ -4,6 +4,7 @@ import Footer from '../components/Footer'; // Import the Footer
 import bgImage from '../assets/bg5.jpg'; // Import the FAQ background image
 import { motion } from 'framer-motion'; // Import motion from framer-motion
 
+
 const faqs = [
   { question: "What are the ingredients in your colours?", answer: "Our colours are made from natural corn starch and food-grade dyes, ensuring 100% safety." },
   { question: "Are your colours safe for use, especially children?", answer: "Yes, our Holi colours are completely food-grade and safe for all, including children. They are gentle on the skin." },
@@ -27,7 +28,6 @@ const faqs = [
   { question: "What bulk box sizes do you offer?", answer: "We provide box sizes of 5kg, 10kg, 20kg, 25kg, and 50kg for bulk orders." },
   { question: "Do you offer squeeze bottles, and can they be customized with our logo?", answer: "Yes, we offer squeeze bottles in a standard 350g size, with custom sizes available upon request. We can also add your logo for branded packaging." },
 ];
-
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null); // Specify type for state
@@ -56,13 +56,13 @@ const FAQSection = () => {
   }, []);
 
   return (
-    <div className="font-nunito">
+    <div className="font-poppins">
       {/* Header Component */}
       <Header />
 
       {/* FAQ Banner */}
       <section 
-        className="relative h-80 md:h-96 lg:h-[500px] flex items-center justify-center bg-cover bg-center font-nunito"
+        className="relative h-80 md:h-96 lg:h-[500px] flex items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage: `url(${bgImage})`, // Correctly use the imported image
           backgroundAttachment: 'fixed'
@@ -70,8 +70,8 @@ const FAQSection = () => {
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 text-center text-white px-4 md:px-6 lg:px-8">
-          <h1 className="text-xl md:text-3xl font-bold">Frequently Asked Questions</h1>
-          <p className="mt-2 text-sm md:text-lg lg:text-xl max-w-2xl mx-auto">
+          <h1 className="text-xl md:text-3xl" style={{ fontFamily: 'The Seasons' }}>Frequently Asked Questions</h1>
+          <p className="mt-2 text-sm md:text-lg lg:text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Poppins' }}>
             Find answers to common questions about our products, services, and policies. We're here to help!
           </p>
         </div>
@@ -89,11 +89,11 @@ const FAQSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }} // Delay based on index for staggered effect
             >
               <button
-                className={`w-full text-left px-6 py-4 text-lg font-semibold flex justify-between items-center 
+                className={`w-full text-left px-6 py-4 text-lg flex justify-between items-center 
                   ${openIndex === index ? 'bg-red-500 text-white' : 'bg-white text-gray-700'} transition-colors duration-300`}
                 onClick={() => toggleFAQ(index)}
               >
-                {faq.question}
+                <span style={{ fontFamily: 'Poppins' }}>{faq.question}</span>
                 <span>{openIndex === index ? "-" : "+"}</span>
               </button>
               {openIndex === index && (
@@ -103,6 +103,7 @@ const FAQSection = () => {
                   animate={{ opacity: 1, height: 'auto' }} // Animate to full height
                   exit={{ opacity: 0, height: 0 }} // Exit animation
                   transition={{ duration: 0.3 }} // Duration of exit animation
+                  style={{ fontFamily: 'Poppins' }}
                 >
                   {faq.answer}
                 </motion.div>

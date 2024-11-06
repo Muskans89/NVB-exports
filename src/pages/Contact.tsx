@@ -45,7 +45,7 @@ const ContactPage = () => {
   }, []);
 
   return (
-    <div className="font-nunito bg-gray-50">
+    <div className="font-poppins bg-gray-50">
       {/* Header Component */}
       <Header />
 
@@ -62,7 +62,7 @@ const ContactPage = () => {
       >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-white text-xl md:text-4xl font-bold">Contact Us</h1>
+          <h1 className="text-white text-xl md:text-4xl font-bold" style={{ fontFamily: 'The Seasons' }}>Contact Us</h1>
         </div>
       </motion.section>
 
@@ -77,10 +77,10 @@ const ContactPage = () => {
         {/* Left Column - Contact Information */}
         <div className="flex-1 p-6 flex flex-col justify-between">
           <div>
-            <h2 className="text-xl font-bold mb-4">Contact Details</h2>
-            <p>A-104, Sujay Garden, Mukund Nagar, Pune-411037, Maharashtra, India.</p>
-            <p className="mt-2">Phone: +91-9673240739</p>
-            <p>Email: <a href="mailto:nipunbaldota@gmail.com" className="text-red-500 hover:underline">nipunbaldota@gmail.com</a></p>
+            <h2 className="text-xl font-bold mb-4" style={{ fontFamily: 'The Seasons' }}>Contact Details</h2>
+            <p style={{ fontFamily: 'Poppins' }}>A-104, Sujay Garden, Mukund Nagar, Pune-411037, Maharashtra, India.</p>
+            <p className="mt-2" style={{ fontFamily: 'Poppins' }}>Phone: +91-9673240739</p>
+            <p style={{ fontFamily: 'Poppins' }}>Email: <a href="mailto:nipunbaldota@gmail.com" className="text-red-500 hover:underline">nipunbaldota@gmail.com</a></p>
           </div>
           
           {/* Image Below Contact Details */}
@@ -98,7 +98,7 @@ const ContactPage = () => {
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
-                <label htmlFor="firstName" className="block text-sm font-semibold mb-2">First Name</label>
+                <label htmlFor="firstName" className="block text-sm font-semibold mb-2" style={{ fontFamily: 'Poppins' }}>First Name</label>
                 <input
                   type="text"
                   id="firstName"
@@ -110,7 +110,7 @@ const ContactPage = () => {
                 />
               </div>
               <div>
-                <label htmlFor="lastName" className="block text-sm font-semibold mb-2">Last Name</label>
+                <label htmlFor="lastName" className="block text-sm font-semibold mb-2" style={{ fontFamily: 'Poppins' }}>Last Name</label>
                 <input
                   type="text"
                   id="lastName"
@@ -123,7 +123,7 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="mb-4">
-              <label htmlFor="email" className="block text-sm font-semibold mb-2">Email *</label>
+              <label htmlFor="email" className="block text-sm font-semibold mb-2" style={{ fontFamily: 'Poppins' }}>Email *</label>
               <input
                 type="email"
                 id="email"
@@ -135,7 +135,7 @@ const ContactPage = () => {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="message" className="block text-sm font-semibold mb-2">Message *</label>
+              <label htmlFor="message" className="block text-sm font-semibold mb-2" style={{ fontFamily: 'Poppins' }}>Message *</label>
               <textarea
                 id="message"
                 name="message"
@@ -146,7 +146,7 @@ const ContactPage = () => {
                 rows={4}
               />
             </div>
-            <button type="submit" className="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600 transition duration-300">
+            <button type="submit" className="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600 transition duration-300" style={{ fontFamily: 'Poppins' }}>
               Send
             </button>
           </form>
@@ -160,7 +160,7 @@ const ContactPage = () => {
         animate={isVisible ? { opacity: 1 } : {}} // Animate based on visibility
         transition={{ duration: 1 }} // Transition duration
       >
-        <h2 className="bg-red-500 text-white text-3xl font-bold mb-4 text-center">Find Us Here</h2>
+        <h2 className="bg-red-500 text-white  text:xl md:text-2xl font-bold mb-4 text-center" style={{ fontFamily: 'The Seasons' }}>Find Us Here</h2>
         <div className="p-4 rounded-lg shadow-lg">
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97641.88998473445!2d73.80483282905544!3d18.52506179992735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2cbb0e1c0b6d5%3A0x854fc793b3db5858!2sSujay%20Garden%2C%20Mukund%20Nagar%2C%20Pune%2C%20Maharashtra%20411037!5e0!3m2!1sen!2sin!4v1679992490176!5m2!1sen!2sin"

@@ -36,8 +36,9 @@ const AboutBanner = () => {
       {/* About Us Banner Section */}
       <section 
         id="about-banner" // Added ID for scroll detection
-        className="relative h-80 md:h-96 lg:h-[500px] flex items-center justify-center bg-cover bg-center font-nunito"
+        className="relative h-80 md:h-96 lg:h-[500px] flex items-center justify-center bg-cover bg-center "
         style={{
+           fontFamily: 'Poppins',
           backgroundImage: `url(${bgImage})`,
           backgroundAttachment: 'fixed' // This makes the background image fixed
         }}
