@@ -54,7 +54,8 @@ const AboutBanner = () => {
             animate={isVisible ? { opacity: 1, y: 0 } : {}} // Animate to visible and original position when in view
             transition={{ duration: 0.8 }} // Transition duration
           >
-            About Us
+          Who We Are
+
           </motion.h1>
           <motion.p 
             className="mt-2 text-sm md:text-lg max-w-2xl mx-auto" 
@@ -63,7 +64,7 @@ const AboutBanner = () => {
             animate={isVisible ? { opacity: 1, y: 0 } : {}} // Animate to visible and original position when in view
             transition={{ duration: 0.8 }} // Transition duration
           >
-            Welcome to NVB Exports, where we are committed to sustainability, quality, and customer satisfaction.
+            Crafted with heritage and delivered with excellence, we bring you premium Holi colours for your celebrations.
           </motion.p>
         </div>
       </section>

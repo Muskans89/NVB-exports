@@ -5,12 +5,29 @@ import bgImage from '../assets/bg5.jpg'; // Import the FAQ background image
 import { motion } from 'framer-motion'; // Import motion from framer-motion
 
 const faqs = [
-  { question: "What is NVB Exports?", answer: "NVB Exports is a family-run Holi Colour Manufacturing business, committed to providing high-quality, vibrant, and safe products since 1965." },
-  { question: "Are your products eco-friendly?", answer: "Yes, our products are made from natural ingredients and are 100% non-toxic, ensuring safety for both you and the environment." },
-  { question: "Do you ship internationally?", answer: "Yes, we ship internationally, ensuring that our products reach customers around the world efficiently and safely." },
-  { question: "What is your return policy?", answer: "We accept returns within 30 days of purchase if the products are unused and in their original packaging." },
-  { question: "How can I place a bulk order?", answer: "For bulk orders, please contact our sales team directly, and they will assist you with custom packaging and competitive pricing." },
+  { question: "What are the ingredients in your colours?", answer: "Our colours are made from natural corn starch and food-grade dyes, ensuring 100% safety." },
+  { question: "Are your colours safe for use, especially children?", answer: "Yes, our Holi colours are completely food-grade and safe for all, including children. They are gentle on the skin." },
+  { question: "Are your colours eco-friendly?", answer: "Yes, they’re eco-friendly and biodegradable, with a corn starch base." },
+  { question: "Are your colours stain-free and easy to wash off skin and hair?", answer: "Yes, our colours are mostly stain-free and wash off easily. We recommend wearing old clothes for darker shades and moisturizing your skin beforehand to aid in cleanup." },
+  { question: "Are the colours safe to eat or inhale?", answer: "While our colours are safe, they aren’t meant for consumption. We recommend wearing masks to avoid inhalation during events." },
+  { question: "Are your colours non-combustible?", answer: "Yes, our colours are non-combustible, making them safe for all types of events." },
+  { question: "Can I customize shades of colours?", answer: "Yes, we offer custom shades and branding on packaging at no extra charge." },
+  { question: "How much colour should I order per person?", answer: "Typically, 300-400 grams per participant is recommended for full enjoyment." },
+  { question: "Do you ship internationally, and how do you ensure timely deliveries?", answer: "Yes, we ship worldwide via road, air, or sea, depending on your location, order size, and timeline. Our dedicated logistics team ensures timely delivery." },
+  { question: "What payment options do you offer?", answer: "Payments are accepted via bank transfer. For large orders, we accept LC terms." },
+  { question: "What are some safety tips for using Holi colours?", answer: "Avoid direct contact with the face, play in open spaces, and wear masks, goggles, and headgear." },
+  { question: "Are the colours UV-reactive?", answer: "Yes, we offer 15+ UV-reactive neon shades for vibrant, glowing effects." },
+  { question: "How should I wash off the colours after Holi?", answer: "Simply wash with warm water. Moisturizing skin beforehand can make cleanup easier." },
+  { question: "What packaging options do you offer?", answer: "We provide flexible packaging options, including pouches (10g to 1kg), bulk boxes (5kg to 50kg), and customizable 350g squeeze bottles with logo branding." },
+  { question: "Which countries do you export to?", answer: "We export to over [Y] countries worldwide, including the USA, UK, and Australia." },
+  { question: "Are there export certifications for your products?", answer: "Yes, our products meet international safety standards and certifications, ensuring they’re compliant and safe for global distribution." },
+  { question: "What certifications ensure the quality and safety of your colours?", answer: "Our colours are ISO-certified and MSDS-certified. Each batch undergoes rigorous quality checks to ensure non-toxicity and skin-friendliness." },
+  { question: "What sizes are available for colour pouches?", answer: "Our colour pouches are available in 10g, 20g, 40g, 50g, 80g, 100g, 200g, 250g, 500g, and 1kg." },
+  { question: "How are pouches packaged for bulk orders?", answer: "Pouches are securely packed and sealed in corrugated boxes to ensure safe delivery." },
+  { question: "What bulk box sizes do you offer?", answer: "We provide box sizes of 5kg, 10kg, 20kg, 25kg, and 50kg for bulk orders." },
+  { question: "Do you offer squeeze bottles, and can they be customized with our logo?", answer: "Yes, we offer squeeze bottles in a standard 350g size, with custom sizes available upon request. We can also add your logo for branded packaging." },
 ];
+
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null); // Specify type for state
