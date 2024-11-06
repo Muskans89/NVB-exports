@@ -24,7 +24,7 @@ const MissionVision = () => {
   }, []);
 
   return (
-    <section id="mission-vision" className="py-12 bg-white font-nunito">
+    <section id="mission-vision" className="py-12 bg-white ">
       <div className="max-w-screen-lg mx-auto px-4">
         {/* About Section */}
         <motion.div
@@ -40,7 +40,7 @@ const MissionVision = () => {
             </h3>
           </div>
           <div className="border-l-4 border-red-500 pl-6">
-            <p className="text-base md:text-lg text-gray-700">
+            <p className="text-base md:text-lg text-gray-700" style={{ fontFamily: 'Poppins' }}>
               NVB Exports is a family-run Holi Colour Manufacturing business, founded in 1965. Now in its third generation, the company has over 4 years of experience in exporting products worldwide. We offer a range of colours, from small custom orders to bulk quantities, ensuring the best packaging, shipping, and delivery experience.
             </p>
           </div>
@@ -60,7 +60,7 @@ const MissionVision = () => {
             </h3>
           </div>
           <div className="border-l-4 border-red-500 pl-6">
-            <p className="text-base md:text-lg text-gray-700">
+            <p className="text-base md:text-lg text-gray-700" style={{ fontFamily: 'Poppins' }}>
               Our vision is to bring joy to everyone who uses our colours by providing vibrant, fun, and safe products. We constantly innovate to ensure the best customer experience while maintaining a commitment to quality and timely delivery.
             </p>
           </div>
@@ -80,7 +80,7 @@ const MissionVision = () => {
             </h3>
           </div>
           <div className="border-l-4 border-red-500 pl-6">
-            <p className="text-base md:text-lg text-gray-700">
+            <p className="text-base md:text-lg text-gray-700"  style={{ fontFamily: 'Poppins' }}>
               NVB Exports is committed to manufacturing high-quality, vibrant Holi colours from natural, safe, and non-toxic ingredients. Our team ensures timely delivery, competitive pricing, and customer satisfaction through clear communication and superior service.
             </p>
           </div>

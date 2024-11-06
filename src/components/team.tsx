@@ -31,7 +31,7 @@ const MeetTheTeam = () => {
         <h2 className="text-lg md:text-2xl font-bold" style={{ fontFamily: 'The Seasons' }}>
           Meet the Team
         </h2>
-        <p className="mt-4 text-gray-700 text-md font-poppins">
+        <p className="mt-4 text-gray-700 text-md "  style={{ fontFamily: 'Poppins' }}>
           Our dedicated team of professionals is committed to delivering quality and innovation.
         </p>
 
@@ -52,8 +52,8 @@ const MeetTheTeam = () => {
             <h3 className="text-lg font-semibold text-red-500" style={{ fontFamily: 'The Seasons' }}>
               John Doe
             </h3>
-            <p className="text-sm text-gray-500 font-poppins">CEO & Founder</p>
-            <p className="mt-2 text-gray-600 font-poppins text-sm">
+            <p className="text-sm text-gray-500 "  style={{ fontFamily: 'Poppins' }}>CEO & Founder</p>
+            <p className="mt-2 text-gray-600 text-sm"  style={{ fontFamily: 'Poppins' }}>
               John has over 20 years of experience leading the company to success.
             </p>
           </motion.div>
@@ -73,8 +73,8 @@ const MeetTheTeam = () => {
             <h3 className="text-lg font-semibold text-red-500" style={{ fontFamily: 'The Seasons' }}>
               Jane Smith
             </h3>
-            <p className="text-sm text-gray-500 font-poppins">Head of Operations</p>
-            <p className="mt-2 text-gray-600 font-poppins text-sm">
+            <p className="text-sm text-gray-500 " style={{ fontFamily: 'Poppins' }}>Head of Operations</p>
+            <p className="mt-2 text-gray-600  text-sm" style={{ fontFamily: 'Poppins' }}>
               Jane oversees the daily operations with a focus on excellence.
             </p>
           </motion.div>
@@ -94,8 +94,8 @@ const MeetTheTeam = () => {
             <h3 className="text-lg font-semibold text-red-500" style={{ fontFamily: 'The Seasons' }}>
               Mike Johnson
             </h3>
-            <p className="text-sm text-gray-500 font-poppins">Chief Marketing Officer</p>
-            <p className="mt-2 text-gray-600 font-poppins text-sm">
+            <p className="text-sm text-gray-500 " style={{ fontFamily: 'Poppins' }}>Chief Marketing Officer</p>
+            <p className="mt-2 text-gray-600  text-sm" style={{ fontFamily: 'Poppins' }}>
               Mike brings creativity and strategy to expand our brand's reach.
             </p>
           </motion.div>
