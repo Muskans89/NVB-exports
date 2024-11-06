@@ -8,6 +8,7 @@ import Process from '../components/Feature';
 import Footer from '../components/Footer';
 import CustomerReviews from '../components/CustomerReviews';
 import PartnershipBanner from '../components/Banner_cta';
+import HoliCursorEffect from '../components/holicoloreffect';
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const Home = () => {
             <CustomerReviews />
             <PartnershipBanner />
             <Footer />
+            <HoliCursorEffect/>
 
         </>
     );
