@@ -51,10 +51,23 @@ const HoliCursorEffect: React.FC = () => {
         requestAnimationFrame(() => animateParticles(ctx));
     };
 
+    // Function to handle both mouse and touch movements
+    const createParticlesAtPosition = (x: number, y: number) => {
+        for (let i = 0; i < 3; i++) {
+            particlesRef.current.push(createParticle(x, y));
+        }
+    };
+
+    // Handles mouse movement
     const handleMouseMove = (e: MouseEvent) => {
-        const canvas = canvasRef.current;
-        if (canvas) {
-            particlesRef.current.push(createParticle(e.clientX, e.clientY)); // Only 1 particle per movement
+        createParticlesAtPosition(e.clientX, e.clientY);
+    };
+
+    // Handles touch movement on mobile devices
+    const handleTouchMove = (e: TouchEvent) => {
+        if (e.touches.length > 0) {
+            const touch = e.touches[0];
+            createParticlesAtPosition(touch.clientX, touch.clientY);
         }
     };
 
@@ -66,11 +79,15 @@ const HoliCursorEffect: React.FC = () => {
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
 
+                // Event listeners for both desktop and mobile interactions
                 window.addEventListener("mousemove", handleMouseMove);
+                window.addEventListener("touchmove", handleTouchMove);
                 animateParticles(ctx);
 
+                // Cleanup function
                 return () => {
                     window.removeEventListener("mousemove", handleMouseMove);
+                    window.removeEventListener("touchmove", handleTouchMove);
                 };
             }
         }
