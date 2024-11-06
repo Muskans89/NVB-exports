@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import p1 from '../assets/pouch.png'; // Image for Pouches
-import p2 from '../assets/squeeze-bottle.jpg'; // Image for Squeeze Bottles
+import p2 from '../assets/squeeze-bottle.png'; // Image for Squeeze Bottles
 import p3 from '../assets/bulk-box.jpg'; // Image for Bulk Boxes
-import ppBagImage from '../assets/ppbag.webp'; // Image for PP Bag
+import ppBagImage from '../assets/pp-bag.png'; // Image for PP Bag
 
 const products = [
   {

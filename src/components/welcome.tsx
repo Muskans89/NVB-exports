@@ -40,7 +40,9 @@ const WelcomeSection = () => {
             <FaPlus className="inline" /> {/* Using the Plus icon */}
           </h2>
           <p className="mt-2 text-xs md:text-sm text-white" style={{ fontFamily: 'Poppins' }}>
-            Temple Flowers Processed
+          Annual Production
+
+
           </p>
         </motion.div>
 
@@ -56,7 +58,8 @@ const WelcomeSection = () => {
             <FaPlus className="inline" />
           </h2>
           <p className="mt-2 text-xs md:text-sm text-white" style={{ fontFamily: 'Poppins' }}>
-            Products Shipped
+          Countries Exported
+
           </p>
         </motion.div>
 
@@ -72,7 +75,8 @@ const WelcomeSection = () => {
             <FaPlus className="inline" />
           </h2>
           <p className="mt-2 text-xs md:text-sm text-white" style={{ fontFamily: 'Poppins' }}>
-            Happy Clients
+          Years in Business
+        
           </p>
         </motion.div>
 
@@ -88,7 +92,7 @@ const WelcomeSection = () => {
             <FaPlus className="inline" />
           </h2>
           <p className="mt-2 text-xs md:text-sm text-white" style={{ fontFamily: 'Poppins' }}>
-            Client Review Rating
+          Trusted Customers
           </p>
         </motion.div>
       </div>

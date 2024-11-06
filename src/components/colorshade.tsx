@@ -45,7 +45,7 @@ const NeonShades = () => {
           {colors.map((color, index) => (
             <motion.div
               key={index}
-              className={`relative overflow-hidden transition-transform duration-300`}
+              className="relative overflow-hidden transition-transform duration-300"
               style={{ width: '150px', backgroundColor: color.color }} // Set the background color directly
               initial={{ opacity: 0, y: 20 }} // Start from slightly below and invisible
               animate={isVisible ? { opacity: 1, y: 0 } : {}} // Animate to visible and normal position when in view
@@ -55,7 +55,7 @@ const NeonShades = () => {
                 className="w-full h-48 flex items-center justify-center"
                 style={{ backgroundColor: color.color }} // Set the color for the box
               >
-                <span className="text-sm md:text-lg text-white font-bold">{color.name}</span> {/* Product name in Poppins font */}
+                <span className="text-sm md:text-lg text-white font-bold hidden md:block">{color.name}</span> {/* Name hidden on mobile */}
               </div>
             </motion.div>
           ))}
