@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion'; // Import AnimatePresence
 import Header from '../components/Header'; // Import the Header
 import Footer from '../components/Footer'; // Import the Footer
 import bgImage from '../assets/bg5.jpg'; // Import the FAQ background image
-import { motion } from 'framer-motion'; // Import motion from framer-motion
 import HoliCursorEffect from '../components/holicoloreffect';
-
 
 const faqs = [
   { question: "What are the ingredients in your colours?", answer: "Our colours are made from natural corn starch and food-grade dyes, ensuring 100% safety." },
@@ -29,6 +28,7 @@ const faqs = [
   { question: "What bulk box sizes do you offer?", answer: "We provide box sizes of 5kg, 10kg, 20kg, 25kg, and 50kg for bulk orders." },
   { question: "Do you offer squeeze bottles, and can they be customized with our logo?", answer: "Yes, we offer squeeze bottles in a standard 350g size, with custom sizes available upon request. We can also add your logo for branded packaging." },
 ];
+
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null); // Specify type for state
@@ -97,18 +97,20 @@ const FAQSection = () => {
                 <span style={{ fontFamily: 'Poppins' }}>{faq.question}</span>
                 <span>{openIndex === index ? "-" : "+"}</span>
               </button>
-              {openIndex === index && (
-                <motion.div 
-                  className="px-6 py-4 text-gray-600 transition-all duration-300"
-                  initial={{ opacity: 0, height: 0 }} // Start hidden
-                  animate={{ opacity: 1, height: 'auto' }} // Animate to full height
-                  exit={{ opacity: 0, height: 0 }} // Exit animation
-                  transition={{ duration: 0.3 }} // Duration of exit animation
-                  style={{ fontFamily: 'Poppins' }}
-                >
-                  {faq.answer}
-                </motion.div>
-              )}
+              <AnimatePresence initial={false}>
+                {openIndex === index && (
+                  <motion.div 
+                    className="px-6 overflow-hidden text-gray-600"
+                    initial={{ maxHeight: 0, opacity: 0 }}
+                    animate={{ maxHeight: "300px", opacity: 1 }}
+                    exit={{ maxHeight: 0, opacity: 0 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    style={{ fontFamily: 'Poppins' }}
+                  >
+                    <p className="py-4">{faq.answer}</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </div>

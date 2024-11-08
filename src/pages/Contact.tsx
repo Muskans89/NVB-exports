@@ -99,7 +99,7 @@ const ContactPage = () => {
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
-                <label htmlFor="firstName" className="block text-sm font-semibold mb-2" style={{ fontFamily: 'Poppins' }}>First Name</label>
+                <label htmlFor="firstName" className="block text-sm  mb-2" style={{ fontFamily: 'The Seasons' }}>First Name</label>
                 <input
                   type="text"
                   id="firstName"
@@ -111,7 +111,7 @@ const ContactPage = () => {
                 />
               </div>
               <div>
-                <label htmlFor="lastName" className="block text-sm font-semibold mb-2" style={{ fontFamily: 'Poppins' }}>Last Name</label>
+                <label htmlFor="lastName" className="block text-sm mb-2" style={{ fontFamily: 'The Seasons' }}>Last Name</label>
                 <input
                   type="text"
                   id="lastName"
@@ -124,7 +124,7 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="mb-4">
-              <label htmlFor="email" className="block text-sm font-semibold mb-2" style={{ fontFamily: 'Poppins' }}>Email *</label>
+              <label htmlFor="email" className="block text-sm  mb-2" style={{ fontFamily: 'The Seasons' }}>Email </label>
               <input
                 type="email"
                 id="email"
@@ -136,7 +136,7 @@ const ContactPage = () => {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="message" className="block text-sm font-semibold mb-2" style={{ fontFamily: 'Poppins' }}>Message *</label>
+              <label htmlFor="message" className="block text-sm  mb-2" style={{ fontFamily: 'The Seasons' }}>Message </label>
               <textarea
                 id="message"
                 name="message"
