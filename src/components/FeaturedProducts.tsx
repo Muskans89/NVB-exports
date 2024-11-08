@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion'; // Import motion from framer-motion
-import image1 from '../assets/p1.jpg'; // Import your images
-import image2 from '../assets/p2.jpeg';
+import image1 from '../assets/color1.jpg'; // Import your images
+import image2 from '../assets/colo2.jpg';
 import image3 from '../assets/p3.jpg';
 import image4 from '../assets/p4.jpeg';
 

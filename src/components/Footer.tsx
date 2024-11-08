@@ -11,36 +11,33 @@ const Footer = () => {
               Useful Links
             </h4>
             <ul>
-              <li><a href="#" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>About Us</a></li>
-              <li><a href="#" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>Contact Us</a></li>
-              <li><a href="#" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>Best Deals</a></li>
-              <li><a href="#" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>FAQs</a></li>
+              <li><a href="/About" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>About Us</a></li>
+              <li><a href="/Contact" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>Contact Us</a></li>
+              <li><a href="/Product" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>Best Deals</a></li>
+              <li><a href="/FAQ" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>FAQs</a></li>
             </ul>
           </div>
 
-          {/* Categories */}
-          <div>
-            <h4 className="font-bold text-lg mb-4" style={{ fontFamily: 'The Seasons', fontWeight: 'normal' }}>
-              Categories
-            </h4>
-            <ul>
-              <li><a href="#" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>Lorem Ipsum</a></li>
-              <li><a href="#" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>Lorem Ipsum</a></li>
-              <li><a href="#" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>Lorem Ipsum</a></li>
-              <li><a href="#" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>Lorem Ipsum</a></li>
-            </ul>
-          </div>
+          
 
           {/* Contact Info */}
           <div>
             <h4 className="font-bold text-lg mb-4" style={{ fontFamily: 'The Seasons', fontWeight: 'normal' }}>
-              Contact Us
+            Address
             </h4>
-            <p className="text-white mb-2 text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>123 Fifth Avenue, New York</p>
-            <p className="text-white mb-2 text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>929-242-6868</p>
-            <p className="text-white text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>contact@info.com</p>
+            <p className="text-white mb-2 text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>A-104, Sujay Garden, Mukund Nagar, Pune-411037, Maharashtra, India.</p>
+          
           </div>
-
+{/* Categories */}
+<div>
+            <h4 className="font-bold text-lg mb-4" style={{ fontFamily: 'The Seasons', fontWeight: 'normal' }}>
+               Contact Us
+            </h4>
+            <ul>
+            <p className="text-white mb-2 text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>+91-9673240739</p>
+            <p className="text-white text-sm md:text-base" style={{ fontFamily: 'Poppins' }}> nipunbaldota@gmail.com</p>
+            </ul>
+          </div>
           {/* Social Media Links */}
           <div>
             <h4 className="font-bold text-lg mb-4" style={{ fontFamily: 'The Seasons', fontWeight: 'normal' }}>
@@ -73,7 +70,7 @@ const Footer = () => {
 
         {/* Copyright Section */}
         <div className="mt-12 border-t border-gray-300 pt-6 text-center text-sm text-gray-300" style={{ fontFamily: 'Poppins' }}>
-          Copyright © 2024 NVB Exports. All rights reserved.
+          Copyright © 2024 NVB Exports. All rights reserved. Powered by The Work Journals
         </div>
       </div>
     </footer>

@@ -27,10 +27,12 @@ const HeaderWithOfferAndLogo = () => {
 
         {/* Full-width Cream Section with Logo and Navbar */}
         <section className="bg-cream w-full py-2"> {/* Reduced vertical padding */}
-          <div className="flex justify-between items-center max-w-screen-lg mx-auto px-4">
-            {/* Logo on the left */}
+        <div className="flex justify-between items-center max-w-screen-lg mx-auto px-4">
+            {/* Clickable Logo on the left */}
             <div className="flex-shrink-0 md:ml-[-80px]">
-              <img src={logo} alt="NVB EXPORTS Logo" className="h-10 md:h-16" /> {/* Adjusted logo height */}
+              <Link to="/" onClick={handleLinkClick}>
+                <img src={logo} alt="NVB EXPORTS Logo" className="h-10 md:h-16" /> {/* Adjusted logo height */}
+              </Link>
             </div>
 
             {/* Navbar on the right */}
