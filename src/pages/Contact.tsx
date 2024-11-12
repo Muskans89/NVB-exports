@@ -15,6 +15,7 @@ const ContactPage = () => {
   });
 
   const [isVisible, setIsVisible] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -23,8 +24,15 @@ const ContactPage = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Form Data Submitted:', formData);
-    // Handle form submission logic here
+    
+    // Check if all required fields are filled out
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+      setErrorMessage('Please fill in all the required fields.');
+    } else {
+      setErrorMessage('');
+      console.log('Form Data Submitted:', formData);
+      // Handle form submission logic here (like sending data to the server)
+    }
   };
 
   // Function to handle scroll events
@@ -147,6 +155,9 @@ const ContactPage = () => {
                 rows={4}
               />
             </div>
+            {errorMessage && (
+              <p className="text-red-500 text-xs mb-4">{errorMessage}</p>
+            )}
             <button type="submit" className="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600 transition duration-300" style={{ fontFamily: 'Poppins' }}>
               Send
             </button>
@@ -173,7 +184,7 @@ const ContactPage = () => {
           ></iframe>
         </div>
       </motion.section>
-<HoliCursorEffect/>
+      <HoliCursorEffect/>
       {/* Footer Component */}
       <Footer />
     </div>

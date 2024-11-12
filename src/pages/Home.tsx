@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import CustomerReviews from '../components/CustomerReviews';
 import PartnershipBanner from '../components/Banner_cta';
 import HoliCursorEffect from '../components/holicoloreffect';
+import ExportCountries from '../components/Export_countries';
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <PurposeSection />
             <FourColumnSection />
             <Process />
+            <ExportCountries/>
             <CustomerReviews />
             <PartnershipBanner />
             <Footer />
