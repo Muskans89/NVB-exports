@@ -41,7 +41,8 @@ const MissionVision = () => {
           </div>
           <div className="border-l-4 border-red-500 pl-6">
             <p className="text-base md:text-lg text-gray-700" style={{ fontFamily: 'Poppins' }}>
-              NVB Exports is a family-run Holi Colour Manufacturing business, founded in 1965. Now in its third generation, the company has over 4 years of experience in exporting products worldwide. We offer a range of colours, from small custom orders to bulk quantities, ensuring the best packaging, shipping, and delivery experience.
+            Holi, India’s iconic festival of colours, has captivated hearts around the world, inspiring celebrations at global events, music festivals, and themed parties. At NVB Exports, we recognized this growing enthusiasm and made it our mission to deliver the authentic Holi experience worldwide. For three generations, our family has crafted safe, eco-friendly colours using 100% natural corn starch and organic food-grade dyes. Today, we proudly bring the energy of Indian festivities to international markets, ensuring each celebration is vibrant, safe, and true to tradition.
+
             </p>
           </div>
         </motion.div>
@@ -61,7 +62,7 @@ const MissionVision = () => {
           </div>
           <div className="border-l-4 border-red-500 pl-6">
             <p className="text-base md:text-lg text-gray-700" style={{ fontFamily: 'Poppins' }}>
-              Our vision is to bring joy to everyone who uses our colours by providing vibrant, fun, and safe products. We constantly innovate to ensure the best customer experience while maintaining a commitment to quality and timely delivery.
+            Our vision is to be the global leader in high-quality, eco-friendly celebration colours, inspiring joy and connection through vibrant, safe products. We aim to expand our reach, making Indian festive traditions a part of global celebrations while upholding the highest standards of quality, sustainability, and customer satisfaction. NVB Exports envisions a world coloured with unity and shared happiness.
             </p>
           </div>
         </motion.div>
@@ -81,7 +82,8 @@ const MissionVision = () => {
           </div>
           <div className="border-l-4 border-red-500 pl-6">
             <p className="text-base md:text-lg text-gray-700"  style={{ fontFamily: 'Poppins' }}>
-              NVB Exports is committed to manufacturing high-quality, vibrant Holi colours from natural, safe, and non-toxic ingredients. Our team ensures timely delivery, competitive pricing, and customer satisfaction through clear communication and superior service.
+            We aim to spread the joy of Indian festivals worldwide by providing safe, eco-friendly Holi colours of the highest quality. Our commitment is to enhance global celebrations with vibrant, authentic products crafted with care, ensuring safety, consistency, and sustainability in every shade. At NVB Exports, we’re dedicated to adding colours to life in meaningful, joyous ways.
+
             </p>
           </div>
         </motion.div>

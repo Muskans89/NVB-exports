@@ -36,7 +36,7 @@ const AboutUsSection = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : {}} // Ending state
           transition={{ duration: 1 }} // Transition duration
         >
-          A Heritage of Colour for Celebrations Worldwide
+         Adding Colours to your Life
         </motion.h2>
        
         <motion.p 

@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion'; // Import motion from framer-motion
-import backgroundImage from '../assets/bg3.jpg'; // Use your background image
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import backgroundImage from '../assets/bg3.jpg';
 
 const PartnershipBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate(); // Initialize navigate
 
   // Function to handle scroll events
   const handleScroll = () => {
     const section = document.getElementById('partnership-banner');
     if (section) {
       const { top, bottom } = section.getBoundingClientRect();
-      // Check if the section is in the viewport
       if (top < window.innerHeight && bottom >= 0) {
         setIsVisible(true);
         window.removeEventListener('scroll', handleScroll); // Remove event listener after visibility is set
@@ -20,40 +21,46 @@ const PartnershipBanner = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll); // Clean up the event listener
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Function to handle button click
+  const handleEnquiryClick = () => {
+    navigate('/contact'); // Navigate to the contact page
+  };
 
   return (
     <section 
       id="partnership-banner" 
-      className="relative h-96 flex items-center justify-center text-center overflow-hidden" // Increased height to h-96
+      className="relative h-96 flex items-center justify-center text-center overflow-hidden"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed', // Makes the background fixed
+        backgroundAttachment: 'fixed',
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-50" /> {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-black opacity-50"></div> {/* Gradient overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4" style={{ fontFamily: 'Nunito' }}>
         
         {/* Animated Heading */}
         <motion.h2 
-          className="text-xl md:text-3xl font-bold mb-10" 
+          className="text-xl md:text-2xl font-bold mb-10" 
           style={{ fontFamily: 'The Seasons' }}
-          initial={{ opacity: 0, y: -20 }} // Start with opacity 0 and slightly above
-          animate={isVisible ? { opacity: 1, y: 0 } : {}} // Animate to full opacity and original position when in view
-          transition={{ duration: 0.8 }} // Transition duration
+          initial={{ opacity: 0, y: -20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
         >
-          PARTNERSHIP OPPORTUNITY
+          A Heritage of Colour for Celebrations Worldwide
         </motion.h2>
         
-        {/* Animated Button */}
+        {/* Animated Button with Hover and Click Effect */}
         <motion.button 
-          className="bg-white text-black px-6 py-2 shadow transition duration-300"
-          initial={{ opacity: 0, scale: 0.8 }} // Start with opacity 0 and scaled down
-          animate={isVisible ? { opacity: 1, scale: 1 } : {}} // Animate to full opacity and normal scale when in view
-          transition={{ duration: 0.5, delay: 0.2 }} // Delay for staggered effect
+          onClick={handleEnquiryClick} // Click event to navigate
+          className="bg-white text-black px-6 py-2 shadow transition duration-300 hover:bg-transparent hover:text-white hover:border-white border-2 border-transparent"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           Enquiry
         </motion.button>

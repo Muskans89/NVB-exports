@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram,  FaLinkedinIn } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -50,17 +50,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-pink transition-colors text-sm md:text-base">
+                <a href="https://www.instagram.com/nvbexports/profilecard/?igsh=eW83dGY3amk3NGEz" target="_blank" rel="noopener noreferrer" className="hover:text-pink transition-colors text-sm md:text-base">
                   <FaInstagram size={24} />
                 </a>
               </li>
+            
               <li>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-pink transition-colors text-sm md:text-base">
-                  <FaTwitter size={24} />
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-pink transition-colors text-sm md:text-base">
+                <a href="https://www.linkedin.com/company/nvb-exports/" target="_blank" rel="noopener noreferrer" className="hover:text-pink transition-colors text-sm md:text-base">
                   <FaLinkedinIn size={24} />
                 </a>
               </li>

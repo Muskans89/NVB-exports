@@ -8,6 +8,7 @@ const NeonShades = () => {
     { name: 'Red', color: '#FF0000' },
     { name: 'Magenta', color: '#FF00FF' },
     { name: 'Sky Blue', color: '#87CEEB' },
+    { name: 'Royal Blue', color: '#4169E1' }, 
     { name: 'Violet', color: '#8A2BE2' },
     { name: 'Chrome', color: '#D1D1D1' },
     { name: 'Pink', color: '#FFC0CB' },

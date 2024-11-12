@@ -5,26 +5,50 @@ import { motion } from 'framer-motion'; // Import motion from framer-motion
 const reviews = [
   {
     id: 1,
-    text: "It has been such a happy experience to order on Phool.co. It was really nice...",
-    author: "Akash Chauhan",
+    text: "This fragrance is naturally beautiful, easy to wash off and safe for children.",
+    author: "Reema Rai, Patna",
     rating: 5,
   },
   {
     id: 2,
-    text: "I loved the variety of options available. The delivery was prompt and hassle-free.",
-    author: "Riya Sharma",
+    text: "Awesome product. My whole family was loved using these colors as they were soft and glossy at the same time with some so safe to play.",
+    author: "Rahul Chaudhary, Mumbai",
     rating: 4,
   },
   {
     id: 3,
-    text: "Great service and even better products! Highly recommend to everyone!",
-    author: "Anil Gupta",
+    text: "This product was perfect for the color run event I had. It felt refreshing, natural and I didn’t have to worry about any safety concerns. Definitely a great choice.",
+    author: "Abigail Smith, Malta",
     rating: 5,
   },
   {
     id: 4,
-    text: "The quality exceeded my expectations. Will definitely order again!",
-    author: "Meera Singh",
+    text: "The organic neon colors made our gender reveal unforgettable. It created such an exciting moment and made the celebration extra special.",
+    author: "Daniel Cooper, Australia",
+    rating: 5,
+  },
+  {
+    id: 5,
+    text: "These colours didn't stain my skin or clothes and they added a charm to our Holi party. A great addition to our celebration.",
+    author: "Anushka Behl, Rishikesh",
+    rating: 5,
+  },
+  {
+    id: 6,
+    text: "These colors made our festival so much more fun. They were easy to play with and the shades were so good.",
+    author: "Prateek Verma, Noida",
+    rating: 5,
+  },
+  {
+    id: 7,
+    text: "I loved the quality of these Holi colors. They were natural, safe, and really added to the festive spirit.",
+    author: "Abhilash Sharma, Gurgaon",
+    rating: 5,
+  },
+  {
+    id: 8,
+    text: "Such a fantastic choice for Holi. The colors were rich and bold, and they didn't irritate my skin. Everyone had a blast, and it made our Holi reunion party even more memorable.",
+    author: "Mehak Sharma, Kolkata",
     rating: 5,
   },
 ];
@@ -62,7 +86,7 @@ const CustomerReviews = () => {
   }, []);
 
   return (
-    <section id="customer-reviews" className="bg-red-500 py-8"> {/* Set background color */}
+    <section id="customer-reviews" className="bg-red-500 py-8">
       <div className="max-w-screen-lg mx-auto text-center px-4">
         <h2 className="text-xl md:text-2xl font-bold mb-6 text-white" style={{ fontFamily: 'The Seasons' }}>
           Customer Experiences
@@ -72,15 +96,15 @@ const CustomerReviews = () => {
           {reviews.map((review) => (
             <motion.div
               key={review.id}
-              className="bg-white p-6 shadow-lg mx-4 transition-transform duration-300"
-              initial={{ opacity: 0, y: 20 }} // Start from below and invisible
-              animate={isVisible ? { opacity: 1, y: 0 } : {}} // Animate to visible and original position
-              transition={{ duration: 0.5 }} // Transition duration
+              className="bg-white p-6 shadow-lg mx-4 flex flex-col justify-between items-center min-h-[200px] flex-grow" // Ensures the content is vertically centered
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5 }}
             >
-              <p className="text-black mb-4 text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>
+              <p className="text-black mb-4 text-sm md:text-base text-center" style={{ fontFamily: 'Poppins' }}>
                 {review.text}
               </p>
-              <p className="font-bold text-black text-base md:text-lg" style={{ fontFamily: 'The Seasons' }}>
+              <p className="font-semibold text-black text-sm md:text-lg text-center" style={{ fontFamily: 'The Seasons' }}>
                 {review.author}
               </p>
               <div className="flex justify-center mt-2">
