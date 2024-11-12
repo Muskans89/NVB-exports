@@ -13,7 +13,7 @@ const Footer = () => {
             <ul>
               <li><a href="/About" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>About Us</a></li>
               <li><a href="/Contact" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>Contact Us</a></li>
-              <li><a href="/Product" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>Best Deals</a></li>
+              <li><a href="/Product" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>Product</a></li>
               <li><a href="/FAQ" className="hover:text-pink transition-colors text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>FAQs</a></li>
             </ul>
           </div>
