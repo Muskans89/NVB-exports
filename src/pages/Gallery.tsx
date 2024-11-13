@@ -5,18 +5,18 @@ import HoliCursorEffect from '../components/holicoloreffect';
 
 // Importing images for each section
 import image1 from '../assets/bg1.jpg';
-import image3 from '../assets/bg3.jpg';
+import image3 from '../assets/neon2.jpg';
 import image4 from '../assets/bg4.jpg';
-import image5 from '../assets/bg5.jpg';
+import image5 from '../assets/barsana (1).jpg';
 import image7 from '../assets/bg2.jpg';
-import image10 from '../assets/bg10.jpg';
+import image10 from '../assets/barsana2.jpg';
 
 // Importing factory images based on your provided filenames
 import factory1 from '../assets/factory1.jpg';
 import factory2 from '../assets/factory2.jpg';
-import factory3 from '../assets/factory3.jpg';
+import factory3 from '../assets/factory3 (1).jpeg';
 import factory4 from '../assets/factory4.jpg';
-import factory5 from '../assets/factory5.jpg';
+import factory5 from '../assets/factory3 (2).jpeg';
 
 // Importing product images (assuming you've already imported the images)
 import product1 from '../assets/500x400-01.jpg';
@@ -36,34 +36,10 @@ const Gallery = () => {
       {/* Header Component */}
       <Header />
 
-      {/* Event Images Section */}
-      <section className="py-10 px-6 md:px-8 bg-gradient-to-r from-yellow-100 to-orange-100">
-        <h2 className="md:text-2xl text:xl font-bold mb-6 text-center" style={{ fontFamily: 'The Seasons' }}>Event Images</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {eventImages.map((image, index) => (
-            <motion.div
-              key={index}
-              className={`relative overflow-hidden shadow-lg ${
-                index % 3 === 0 ? 'col-span-2 row-span-2' : 'col-span-1'
-              }`}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <img
-                src={image}
-                alt={`Event Image ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
+    
       {/* Factory Images Section */}
       <section className="py-10 px-6 md:px-8 bg-gradient-to-r from-blue-100 to-green-100">
-        <h2 className="md:text-2xl text:xl font-bold mb-6 text-center" style={{ fontFamily: 'The Seasons' }}>Factory Images</h2>
+        <h2 className="md:text-2xl text:xl font-bold mb-6 text-center" style={{ fontFamily: 'The Seasons' }}>Where it begins</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {factoryImages.map((image, index) => (
             <motion.div
@@ -88,7 +64,7 @@ const Gallery = () => {
 
       {/* Product Images Section */}
       <section className="py-10 px-6 md:px-8 bg-gradient-to-r from-purple-100 to-pink-100">
-        <h2 className="md:text-2xl text:xl font-bold mb-6 text-center" style={{ fontFamily: 'The Seasons' }}>Product Images</h2>
+        <h2 className="md:text-2xl text:xl font-bold mb-6 text-center" style={{ fontFamily: 'The Seasons' }}>Our Collection</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {productImages.map((image, index) => (
             <motion.div
@@ -102,6 +78,30 @@ const Gallery = () => {
               <img
                 src={image}
                 alt={`Product Image ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+  
+      <section className="py-10 px-6 md:px-8 bg-gradient-to-r from-yellow-100 to-orange-100">
+        <h2 className="md:text-2xl text:xl font-bold mb-6 text-center" style={{ fontFamily: 'The Seasons' }}>Colours in Action</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {eventImages.map((image, index) => (
+            <motion.div
+              key={index}
+              className={`relative overflow-hidden shadow-lg ${
+                index % 3 === 0 ? 'col-span-2 row-span-2' : 'col-span-1'
+              }`}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src={image}
+                alt={`Event Image ${index + 1}`}
                 className="w-full h-full object-cover"
               />
             </motion.div>

@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HoliCursorEffect from '../components/holicoloreffect';
-import { FaSearch, FaRegQuestionCircle } from 'react-icons/fa'; // Importing icons for search and question
+import { FaSearch } from 'react-icons/fa';
 
-import bgImage from '../assets/bg5.jpg'; // FAQ background image
+import bgImage from '../assets/bg5.jpg';
 
 const faqs = [
   {
@@ -53,10 +53,12 @@ const faqs = [
   }
 ];
 
+
+
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [searchTerm, setSearchTerm] = useState(""); // New state to handle search term
+  const [searchTerm, setSearchTerm] = useState("");
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -68,7 +70,7 @@ const FAQSection = () => {
       const { top, bottom } = section.getBoundingClientRect();
       if (top < window.innerHeight && bottom >= 0) {
         setIsVisible(true);
-        window.removeEventListener('scroll', handleScroll); // Cleanup after visibility is set
+        window.removeEventListener('scroll', handleScroll);
       }
     }
   };
@@ -78,7 +80,6 @@ const FAQSection = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Filter questions based on search term
   const filteredFAQs = faqs.map(faqSection => ({
     ...faqSection,
     questions: faqSection.questions.filter(faq => faq.question.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -86,27 +87,24 @@ const FAQSection = () => {
 
   return (
     <div className="font-poppins">
-      {/* Header Component */}
       <Header />
 
-      {/* FAQ Banner */}
       <section 
         className="relative h-80 md:h-96 lg:h-[500px] flex items-center justify-center bg-cover bg-center"
         style={{
-          backgroundImage: `url(${bgImage})`, // Set the background image for FAQ section
+          backgroundImage: `url(${bgImage})`,
           backgroundAttachment: 'fixed'
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 text-center text-white px-4 md:px-6 lg:px-8">
-          <h1 className="text-2xl md:text-3xl font-bold" style={{ fontFamily: 'The Seasons' }}>Frequently Asked Questions</h1>
+          <h1 className="text-xl md:text-3xl font-bold" style={{ fontFamily: 'The Seasons' }}>Frequently Asked Questions</h1>
           <p className="mt-2 text-sm md:text-lg lg:text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Poppins' }}>
             Find answers to common questions about our products, services, and policies. We're here to help!
           </p>
         </div>
       </section>
 
-      {/* Search Bar */}
       <div className="max-w-screen-lg mx-auto mt-8 px-4">
         <div className="flex items-center border border-gray-300 rounded-lg">
           <input
@@ -120,24 +118,22 @@ const FAQSection = () => {
         </div>
       </div>
 
-      {/* FAQ Content Section */}
       <section id="faq-section" className="py-12 px-4 md:px-8 max-w-screen-lg mx-auto">
         {filteredFAQs.map((faqSection, sectionIndex) => (
-          <div key={sectionIndex} className="space-y-8">
-            <h2 className=" text:2xl md:text-3xl font-semibold text-left" style={{ fontFamily: 'The Seasons', paddingTop: '2rem', paddingBottom: '1rem' }}>
-              <FaRegQuestionCircle className="inline-block mr-2 text-red-500" size={24} />
+          <div key={sectionIndex} className="mb-12">
+            <h2 className="text-lg md:text-2xl font-semibold text-left py-3 px-4 bg-gray-100 shadow-md mb-6" style={{ fontFamily: 'The Seasons', color: '#333' }}>
               {faqSection.section}
             </h2>
             {faqSection.questions.map((faq, index) => (
               <motion.div
                 key={index}
-                className="bg-white border border-gray-200 rounded-lg shadow-md mb-4"
+                className="bg-white border border-gray-200 shadow-md mb-4 transition transform hover:scale-105 hover:shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <button
-                  className={`w-full text-left px-6 py-4 text-lg flex justify-between items-center ${
+                  className={`w-full text-left px-6 py-4 text-sm md:text-lg flex justify-between items-center ${
                     openIndex === index ? 'bg-red-500 text-white' : 'bg-white text-gray-700'
                   } transition-colors duration-300`}
                   onClick={() => toggleFAQ(index)}
@@ -148,7 +144,7 @@ const FAQSection = () => {
                 <AnimatePresence initial={false}>
                   {openIndex === index && (
                     <motion.div 
-                      className="px-6 overflow-hidden text-gray-600"
+                      className="px-6 overflow-hidden text-gray-600 bg-gray-50 rounded-b-lg"
                       initial={{ maxHeight: 0, opacity: 0 }}
                       animate={{ maxHeight: "300px", opacity: 1 }}
                       exit={{ maxHeight: 0, opacity: 0 }}
@@ -165,10 +161,7 @@ const FAQSection = () => {
         ))}
       </section>
 
-      {/* Footer Component */}
       <Footer />
-
-      {/* Holi Cursor Effect */}
       <HoliCursorEffect />
     </div>
   );

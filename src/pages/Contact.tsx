@@ -2,7 +2,7 @@ import Header from '../components/Header'; // Import the Header
 import Footer from '../components/Footer'; // Import the Footer
 import { useState, useEffect } from 'react';
 import bannerImage from '../assets/bg1.jpg'; // Import the banner image
-import contactImage from '../assets/bg5.jpg'; // Import the contact image
+import contactImage from '../assets/party.jpg'; // Import the contact image
 import { motion } from 'framer-motion'; // Import motion from framer-motion
 import HoliCursorEffect from '../components/holicoloreffect';
 
