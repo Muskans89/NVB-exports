@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import image1 from '../assets/500x400-01.jpg';
 import image2 from '../assets/500x400-02.jpg';
@@ -7,6 +7,7 @@ import image4 from '../assets/4.png';
 
 const FeaturedProducts = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const products = [
     { name: 'UV Reactive Holi Colours', image: image1, description: 'Add a neon glow to your Holi celebrations with our UV reactive powders.' },
@@ -26,19 +27,50 @@ const FeaturedProducts = () => {
     }
   };
 
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -200, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 200, behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <section id="featured-products" className="bg-warmRose p-4 sm:p-8 font-nunito">
-      <h2 className="text-xl sm:text-2xl font-bold mb-4 text-black text-center" style={{ fontFamily: 'The Seasons', fontWeight: 'normal' }}>
+    <section id="featured-products" className="bg-warmRose p-4 sm:p-8 font-nunito relative">
+      <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-black text-center" style={{ fontFamily: 'The Seasons' }}>
         Our Products
       </h2>
 
+      {/* Minimal Arrow buttons for mobile view only */}
+      <button 
+        onClick={scrollLeft} 
+        className="sm:hidden absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-500 bg-opacity-70 text-white rounded-full p-1 shadow-md"
+        style={{ zIndex: 10 }}
+      >
+        ◀
+      </button>
+      <button 
+        onClick={scrollRight} 
+        className="sm:hidden absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-500 bg-opacity-70 text-white rounded-full p-1 shadow-md"
+        style={{ zIndex: 10 }}
+      >
+        ▶
+      </button>
+
       {/* Flex container with horizontal scroll only on mobile */}
-      <div className="flex space-x-3 sm:space-x-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 sm:overflow-visible">
+      <div
+        ref={scrollContainerRef}
+        className="flex space-x-3 sm:space-x-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 sm:overflow-visible"
+      >
         {products.map((product, index) => (
           <motion.div
             key={index}
@@ -47,7 +79,7 @@ const FeaturedProducts = () => {
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: index * 0.15 }}
           >
-            {/* Mobile specific height */}
+            {/* Image container with hover effect */}
             <div className="flex-grow flex items-center justify-center overflow-hidden relative group w-full h-[180px] sm:h-[180px] lg:h-[160px]">
               <img
                 src={product.image}

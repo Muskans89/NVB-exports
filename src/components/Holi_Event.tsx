@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion'; // Import motion from framer-motion
 import holiFestivalImage from '../assets/bg1.jpg'; 
-import schoolEventsImage from '../assets/bg2.jpg'; 
-import fundraisersImage from '../assets/bg10.jpg'; 
-import birthdayPartiesImage from '../assets/bg3.jpg'; 
-import photoShootsImage from '../assets/bg4.jpg'; 
-import musicFestivalsImage from '../assets/bg7.jpg'; 
+import schoolEventsImage from '../assets/kids.jpg'; 
+import fundraisersImage from '../assets/fundraisers.webp'; 
+import birthdayPartiesImage from '../assets/birthday.jpg'; 
+import photoShootsImage from '../assets/photoshoot.jpg'; 
+import musicFestivalsImage from '../assets/music.jpeg'; 
 import genderRevealImage from '../assets/gender.jpg'; 
 import weddingImage from '../assets/wedding.jpg'; 
 import neonPartiesImage from '../assets/neon.jpg'; 
@@ -60,10 +60,8 @@ const HoliProductDescription = () => {
       content: `Color runs and powder throws at fundraisers encourage participation, helping create memorable, colorful experiences that enhance engagement and visibility.`, 
       imageUrl: fundraisersImage 
     },
-    
   ];
 
-  // Function to handle scroll events
   const handleScroll = () => {
     const section = document.getElementById('holi-product-description');
     if (section) {
@@ -83,8 +81,8 @@ const HoliProductDescription = () => {
   return (
     <section id="holi-product-description" className="py-16 bg-white font-nunito">
       <div className="max-w-screen-xl mx-auto px-4">
-        <h2 className="md:text-2xl text-xl mb-10 text-black text-center font-semibold" style={{ fontFamily: 'The Seasons' }}>
-          Holi Color Powder Uses
+        <h2 className="md:text-2xl text-xl mb-10 text-black font-semibold text-center" style={{ fontFamily: 'The Seasons' }}>
+        For Every Celebration
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {descriptions.map((desc, index) => (
@@ -101,11 +99,11 @@ const HoliProductDescription = () => {
                 className="w-full h-56 object-cover" 
                 style={{ objectFit: 'cover' }}
               />
-              <div className="bg-white p-6 mt-0">
-                <h3 className="text-lg font-semibold text-black" style={{ fontFamily: 'The Seasons' }}>
+              <div className="bg-white p-2 mt-0 text-left">
+                <h3 className="text-lg font-semibold text-black text-left" style={{ fontFamily: 'The Seasons' }}>
                   {desc.title}
                 </h3>
-                <p className="mt-2 text-sm text-gray-700">{desc.content}</p>
+                <p className="mt-2 text-sm text-gray-700 text-left">{desc.content}</p>
               </div>
             </motion.div>
           ))}

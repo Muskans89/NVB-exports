@@ -77,7 +77,7 @@ const ProductSection: React.FC = () => {
 
   return (
     <section id="product-section" className="py-5 bg-red-500">
-      <h2 className="md:text-2xl text-white text-center p-6" style={{ fontFamily: 'The Seasons' }}>
+      <h2 className="md:text-2xl font-semibold text-white text-center p-6" style={{ fontFamily: 'The Seasons' }}>
         Customization
       </h2>
       <div className="max-w-screen-xl mx-auto">

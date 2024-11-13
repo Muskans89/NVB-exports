@@ -54,17 +54,17 @@ const FromTheDeskOfNipun = () => {
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            From the Desk of the Executive Director
+            From the Desk of Nipun Baldota 
           </motion.h2>
 
           <motion.h3
-            className="text-lg font-semibold text-red-500 mb-2 text-left"
-            style={{ fontFamily: 'The Seasons' }}
+            className="text-lg  text-red-500 mb-2 text-left"
+            style={{ fontFamily: 'Poppins' }}
             initial={{ opacity: 0, y: 20 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            Nipun Baldota
+             Executive Director -  Exports & Marketing
           </motion.h3>
           <motion.p
             className="text-sm text-gray-500 mb-4 text-left"
@@ -73,11 +73,11 @@ const FromTheDeskOfNipun = () => {
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            Exports & Marketing
+           
           </motion.p>
           <motion.p
             className="text-gray-600 text-sm md:text-base leading-relaxed text-left"
-            style={{ fontFamily: 'Poppins' }}
+           
             initial={{ opacity: 0, y: 20 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.6 }}

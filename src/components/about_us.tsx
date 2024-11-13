@@ -30,7 +30,7 @@ const AboutUsSection = () => {
     >
       <div className="relative z-10 p-6 md:p-8 max-w-screen-lg mx-auto">
         <motion.h2 
-          className="md:text-2xl text-md font-normal text-center mb-4 text-black" 
+          className="md:text-2xl text-md font-semibold text-center mb-4 text-black" 
           style={{ fontFamily: 'The Seasons' }}
           initial={{ opacity: 0, y: 20 }} // Starting state
           animate={isVisible ? { opacity: 1, y: 0 } : {}} // Ending state

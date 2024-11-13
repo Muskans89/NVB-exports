@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import purposeImage from '../assets/aim.jpg';
+import purposeImage from '../assets/holi2.jpg';
 
 const PurposeSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,10 +32,10 @@ const PurposeSection = () => {
           transition={{ duration: 1 }} // Transition duration
         >
           <h2 
-            className="text-lg md:text-2xl font-bold mb-4" 
-            style={{ fontFamily: 'The Seasons', fontWeight: 'normal' }}
+            className="text-center md:text-left text-lg md:text-2xl font-semibold mb-4" 
+            style={{ fontFamily: 'The Seasons' }}
           >
-           Why We Do What We Do
+        Our Purpose
           </h2>
           <p className="text-gray-600 text-sm md:text-lg leading-relaxed" style={{ fontFamily: 'Poppins' }}>
             We’re driven by a passion to bring vibrant, safe, and eco-friendly colours to celebrations around the world. Rooted in generations of expertise and a dedication to quality, every colour we create embodies our commitment to unmatched standards. Trusted globally, we aim to make every celebration brighter, more joyful, and truly unforgettable.

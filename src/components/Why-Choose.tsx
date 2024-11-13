@@ -18,7 +18,7 @@ const WhyChooseUs = () => {
     {
       id: 3,
       icon: 'public', // Changed to globe icon for Trusted Worldwide
-      title: 'Trusted Worldwide',
+      title: 'Trusted <br /> Worldwide', // Add line break here
     },
     {
       id: 4,
@@ -61,7 +61,7 @@ const WhyChooseUs = () => {
   return (
     <div id="why-choose-us" className="py-8 bg-red-500"> {/* Set background to red with consistent padding */}
       <h2 
-        className="text-center text-xl md:text-2xl mb-4 text-white" 
+        className="text-center font-semibold text-xl md:text-2xl mb-4 text-white" 
         style={{ fontFamily: 'The Seasons' }} // Title in "The Seasons" font
       >
         Our Promise to You
@@ -79,9 +79,11 @@ const WhyChooseUs = () => {
             {/* Icon in white */}
             <span className="material-icons text-4xl mb-2 text-white">{reason.icon}</span>
             {/* Title in white without bold styling */}
-            <h3 className="text-base sm:text-lg mb-2 text-white" style={{ fontFamily: 'Poppins' }}>
-              {reason.title}
-            </h3>
+            <h3 
+              className="text-base sm:text-lg mb-2 text-white" 
+              style={{ fontFamily: 'Poppins' }}
+              dangerouslySetInnerHTML={{ __html: reason.title }} // Render HTML for line break
+            />
           </motion.div>
         ))}
       </div>

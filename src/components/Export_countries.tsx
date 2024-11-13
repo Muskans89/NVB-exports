@@ -24,7 +24,7 @@ const ExportCountries = () => {
         className="text-xl md:text-2xl font-semibold text-center mb-12"
         style={{ fontFamily: 'The Seasons' }}
       >
-        Countries We Export To
+        Trusted Globally
       </h2>
       {/* Scroll wrapper with gray background for the section */}
       <div className="overflow-hidden bg-gray-100">

@@ -86,37 +86,35 @@ const CustomerReviews = () => {
   }, []);
 
   return (
-    <section id="customer-reviews" className="bg-red-500 py-8">
-      <div className="max-w-screen-lg mx-auto text-center px-4">
-        <h2 className="text-xl md:text-2xl font-bold mb-6 text-white" style={{ fontFamily: 'The Seasons' }}>
-          Customer Experiences
-        </h2>
-
-        <Slider {...settings}>
-          {reviews.map((review) => (
-            <motion.div
-              key={review.id}
-              className="bg-white p-6 shadow-lg mx-4 flex flex-col justify-between items-center min-h-[200px] flex-grow" // Ensures the content is vertically centered
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5 }}
-            >
-              <p className="text-black mb-4 text-sm md:text-base text-center" style={{ fontFamily: 'Poppins' }}>
-                {review.text}
-              </p>
-              <p className="font-semibold text-black text-sm md:text-lg text-center" style={{ fontFamily: 'The Seasons' }}>
-                {review.author}
-              </p>
-              <div className="flex justify-center mt-2">
-                {[...Array(review.rating)].map((_, index) => (
-                  <span key={index} className="text-yellow-500">★</span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </Slider>
-      </div>
-    </section>
+    <section id="customer-reviews" className="bg-red-500 pt-6 pb-12 md:pt-8 md:pb-16 relative z-10">
+    <div className="max-w-screen-lg mx-auto text-center px-4 md:px-6">
+      <h2 className="font-semibold text-lg md:text-2xl  mb-6 md:mb-8 text-white" style={{ fontFamily: 'The Seasons' }}>
+        Customer Experiences
+      </h2>
+  
+      <Slider {...settings}>
+        {reviews.map((review) => (
+          <motion.div
+            key={review.id}
+            className="bg-white px-6 py-10 md:px-10 md:py-16 shadow-lg mx-auto my-4 flex flex-col justify-center items-center min-h-[200px] md:min-h-[250px] max-w-xs md:max-w-md"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5 }}
+            style={{ boxSizing: 'border-box' }}
+          >
+            <p className="text-black mb-4 text-sm md:text-base text-center" style={{ fontFamily: 'Poppins' }}>
+              {review.text}
+            </p>
+            <p className="font-semibold text-black text-sm md:text-lg text-center" style={{ fontFamily: 'The Seasons' }}>
+              {review.author}
+            </p>
+          </motion.div>
+        ))}
+      </Slider>
+    </div>
+  </section>
+    
+  
   );
 };
 

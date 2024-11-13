@@ -38,7 +38,7 @@ const NeonShades = () => {
 
   return (
     <section id="neon-shades" className="bg-gray-100 p-8 font-nunito">
-      <h2 className="md:text-2xl text-xl mb-4 text-black text-center" style={{ fontFamily: 'The Seasons', fontWeight: 'normal' }}>
+      <h2 className="font-semibold md:text-2xl text-xl mb-4 text-black text-center" style={{ fontFamily: 'The Seasons'}}>
         Neon Shades
       </h2>
       <div className="overflow-x-auto">
@@ -46,18 +46,13 @@ const NeonShades = () => {
           {colors.map((color, index) => (
             <motion.div
               key={index}
-              className="relative overflow-hidden transition-transform duration-300"
-              style={{ width: '150px', backgroundColor: color.color }} // Set the background color directly
+              className="relative w-36 h-48 flex items-center justify-center text-center font-bold text-sm md:text-lg"
+              style={{ backgroundColor: color.color }} // Set the background color directly
               initial={{ opacity: 0, y: 20 }} // Start from slightly below and invisible
               animate={isVisible ? { opacity: 1, y: 0 } : {}} // Animate to visible and normal position when in view
               transition={{ duration: 0.5, delay: index * 0.1 }} // Delay based on index for staggered effect
             >
-              <div
-                className="w-full h-48 flex items-center justify-center"
-                style={{ backgroundColor: color.color }} // Set the color for the box
-              >
-                <span className="text-sm md:text-lg text-white font-bold hidden md:block">{color.name}</span> {/* Name hidden on mobile */}
-              </div>
+              <span className="text-white sm:block hidden">{color.name}</span> {/* Hide text on mobile */}
             </motion.div>
           ))}
         </div>
