@@ -58,7 +58,8 @@ const AboutBanner = () => {
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            Who We Are
+            The NVB Story 
+
           </motion.h1>
           <motion.p 
             className="mt-2 text-sm md:text-lg max-w-2xl mx-auto" 
@@ -67,7 +68,8 @@ const AboutBanner = () => {
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            Crafted with heritage and delivered with excellence, we bring you premium Holi colours for your celebrations.
+         
+Rooted in tradition and perfected with care, we deliver premium Holi colours to make every celebration unforgettable.
           </motion.p>
         </div>
       </section>
