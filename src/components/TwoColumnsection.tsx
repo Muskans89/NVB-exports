@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import bg1 from '../assets/bg1.jpg';
 import bg2 from '../assets/bg2.jpg';
-import bg3 from '../assets/img6.png';
+import bg3 from '../assets/barsana2.jpg';
 import bg4 from '../assets/bg4.jpg';
 
 const FourColumnSection = () => {

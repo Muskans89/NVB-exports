@@ -38,7 +38,9 @@ const ExportCountries = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <span className={`flag-icon flag-icon-${country.code} w-24 h-16 mb-2`} />
-              <span className="text-sm font-semibold">{country.name}</span>
+              <span className="text-sm " style={{ fontFamily: 'Poppins' }}>
+                {country.name}
+              </span>
             </motion.div>
           ))}
         </div>
