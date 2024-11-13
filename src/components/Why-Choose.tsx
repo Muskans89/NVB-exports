@@ -61,7 +61,7 @@ const WhyChooseUs = () => {
   return (
     <div id="why-choose-us" className="py-8 bg-red-500"> {/* Set background to red with consistent padding */}
       <h2 
-        className="text-center font-semibold text-xl md:text-2xl mb-4 text-white" 
+        className="text-center font-semibold text-md md:text-2xl mb-4 text-white" 
         style={{ fontFamily: 'The Seasons' }} // Title in "The Seasons" font
       >
         Our Promise to You
