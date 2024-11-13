@@ -74,23 +74,23 @@ const FeaturedProducts = () => {
         {products.map((product, index) => (
           <motion.div
             key={index}
-            className="bg-white p-2 sm:p-4 shadow-md min-w-[150px] sm:min-w-[220px] md:w-[260px] lg:w-[300px] flex-shrink-0 flex flex-col"
+            className="bg-white p-4 shadow-md min-w-[150px] sm:min-w-[220px] md:w-[260px] lg:w-[300px] flex-shrink-0 flex flex-col"
             initial={{ opacity: 0, y: 20 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: index * 0.15 }}
           >
-            {/* Image container with hover effect */}
-            <div className="flex-grow flex items-center justify-center overflow-hidden relative group w-full h-[180px] sm:h-[180px] lg:h-[160px]">
+            {/* Consistent Image container height */}
+            <div className="flex-grow h-[180px] flex items-center justify-center overflow-hidden relative group w-full">
               <img
                 src={product.image}
                 alt={product.name}
                 className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 w-full h-full"
               />
             </div>
-            <h3 className="text-xs sm:text-md mt-2 text-black font-semibold text-left" style={{ fontFamily: 'The Seasons', fontWeight: 'normal' }}>
+            <h3 className="md:text:lg text-md sm:text-md mt-2 text-black font-semibold text-left min-h-[10px]" style={{ fontFamily: 'The Seasons', fontWeight: 'normal' }}>
               {product.name}
             </h3>
-            <p className="text-gray-600 text-xs sm:text-sm mt-1 text-left" style={{ fontFamily: 'Poppins' }}>
+            <p className="text-gray-600 text-xs sm:text-sm mt-1 text-left min-h-[60px]" style={{ fontFamily: 'Poppins' }}>
               {product.description}
             </p>
           </motion.div>
