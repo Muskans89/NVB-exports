@@ -41,7 +41,7 @@ const PartnershipBanner = () => {
       }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div> {/* Gradient overlay */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4" style={{ fontFamily: 'Nunito' }}>
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4" >
         
         {/* Animated Heading */}
         <motion.h2 
@@ -60,6 +60,7 @@ const PartnershipBanner = () => {
           className="bg-white text-black px-6 py-2 shadow transition duration-300 hover:bg-transparent hover:text-white hover:border-white border-2 border-transparent"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+          style={{ fontFamily: 'poppins' }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           Enquiry
