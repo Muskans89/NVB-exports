@@ -24,7 +24,8 @@
     "react-router-dom": "^6.27.0",
     "react-scroll": "^1.9.0",
     "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "axios": "^1.5.0"  // Newly added axios dependency
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
@@ -41,6 +42,7 @@
     "tailwindcss": "^3.4.14",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.7.0",
-    "vite": "^5.4.8"
+    "vite": "^5.4.8",
+    "@types/axios": "^1.5.0"  // Newly added types for axios
   }
 }
