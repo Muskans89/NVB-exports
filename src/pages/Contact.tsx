@@ -34,7 +34,8 @@ const ContactPage = () => {
     setErrorMessage('');
 
     try {
-await axios.post('/api/send-email.js', formData);
+await axios.post('/api/send-email', formData);
+
 
       alert('Email sent successfully');
       setFormData({ firstName: '', lastName: '', email: '', message: '' }); // Clear the form
