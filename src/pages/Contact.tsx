@@ -34,7 +34,7 @@ const ContactPage = () => {
     setErrorMessage('');
 
     try {
-      await axios.post('http://localhost:3001/send-email', formData);
+     await axios.post('https://nvb-exports.vercel.app/send-email', formData);
       alert('Email sent successfully');
       setFormData({ firstName: '', lastName: '', email: '', message: '' }); // Clear the form
     } catch (error) {
