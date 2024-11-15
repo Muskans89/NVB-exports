@@ -10,6 +10,16 @@ const transporter = nodemailer.createTransport({
 });
 
 export default async (req, res) => {
+  // Set CORS headers to allow requests from your Hostinger domain
+  res.setHeader('Access-Control-Allow-Origin', 'https://magenta-chimpanzee-912605.hostingersite.com');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  // Handle preflight OPTIONS request
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
