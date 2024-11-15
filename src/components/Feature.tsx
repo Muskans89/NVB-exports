@@ -1,5 +1,5 @@
-import processMobile from '../assets/process.png';
-import processDesktop from '../assets/process2.webp';
+import processMobile from '../assets/process2.jpg';
+import processDesktop from '../assets/process.jpg';
 
 const Process = () => {
   return (
