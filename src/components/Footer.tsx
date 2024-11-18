@@ -43,11 +43,6 @@ const Footer = () => {
             </h4>
             <ul className="flex space-x-4">
               <li>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-pink transition-colors text-sm md:text-base">
-                  <FaFacebookF size={24} />
-                </a>
-              </li>
-              <li>
                 <a href="https://www.instagram.com/nvbexports/profilecard/?igsh=eW83dGY3amk3NGEz" target="_blank" rel="noopener noreferrer" className="hover:text-pink transition-colors text-sm md:text-base">
                   <FaInstagram size={24} />
                 </a>
