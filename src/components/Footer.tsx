@@ -33,7 +33,7 @@ const Footer = () => {
               Contact Us
             </h4>
             <p className="text-white mb-2 text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>+91-9673240739</p>
-            <p className="text-white text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>nipunbaldota@gmail.com</p>
+            <p className="text-white text-sm md:text-base" style={{ fontFamily: 'Poppins' }}>nipun@nvbexports.com</p>
           </div>
 
           {/* Social Media Links */}
